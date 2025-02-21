@@ -155,12 +155,16 @@
             margin-bottom: 3rem;
             color: var(--text);
             line-height: 1.2;
+            opacity: 0;
+            animation: fadeInUp 1s 0.3s forwards;
         }
 
         .price-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s 0.6s forwards;
         }
 
         .price-card {
@@ -256,6 +260,11 @@
             transform: scale(1.2);
         }
 
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         @media (max-width: 1024px) {
             .price-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -280,9 +289,9 @@
             <div class="nav-links">
                 <a href="https://github.com/whoiamHiragana?tab=repositories" target="_blank">GitHub</a>
                 <a href="/">Home</a>
-                 <a href="/price">Price</a> 
-                <a href="/contact">Contact</a> 
-                <a href="/donate">Donate</a>   
+                 <a href="/price">Price</a>
+                <a href="/contact">Contact</a>
+                <a href="/donate">Donate</a>
             </div>
         </nav>
     </header>
@@ -299,6 +308,16 @@
                             <li><i class='bx bx-check'></i> Responsive Design</li>
                             <li><i class='bx bx-check'></i> SEO Optimization</li>
                             <li><i class='bx bx-check'></i> 1 Year Support</li>
+                        </ul>
+                        <a href="/contact">Contact Us</a>
+                    </div>
+                    <div class="price-card">
+                        <h3>Mobile App Development</h3>
+                        <div class="price">From $50</div>
+                        <ul>
+                            <li><i class='bx bx-check'></i> Cross-Platform</li>
+                            <li><i class='bx bx-check'></i> User-Friendly Interface</li>
+                            <li><i class='bx bx-check'></i> App Store Deployment</li>
                         </ul>
                         <a href="/contact">Contact Us</a>
                     </div>
